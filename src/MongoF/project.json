@@ -1,0 +1,24 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "MongoF Console Application",
+  "authors": [ "Administrator" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+    "MongoDB.Driver": "2.2.3"
+  },
+
+  "commands": {
+    "MongoF": "MongoF"
+  },
+
+  "frameworks": {
+    "dnx451": { }
+    }
+}
