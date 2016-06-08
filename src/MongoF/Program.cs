@@ -12,7 +12,7 @@ namespace MongoF
         public static void Main(string[] args)
         {
             //连接信息
-            string conn = "mongodb://10.202.101.43:27017";
+            string conn = "mongodb://10.202.101.13:3717";
             var client = new MongoClient(conn);
             var database = client.GetDatabase("HelloMongo");
             var collection = database.GetCollection<BsonDocument>("Order");
@@ -56,14 +56,9 @@ namespace MongoF
             collection.DeleteOne(filter);
             Console.WriteLine("---5.query after delete data");
             OutputAll(collection);
-
-
-
+            Console.WriteLine("Test End");
             Console.ReadLine();
-
-
         }
-
         private static void OutputAll(IMongoCollection<BsonDocument> collection)
         {
             var cursor = collection.Find(new BsonDocument()).ToCursor();
